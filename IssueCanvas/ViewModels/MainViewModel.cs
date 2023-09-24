@@ -34,4 +34,10 @@ public partial class MainViewModel : ViewModelBase
             Content = "Load";
         }
     }
+
+    [RelayCommand]
+    private void Purge()
+    {
+        SKGraphics.PurgeAllCaches(); // Try to lower unmanaged memory in skia
+    }
 }

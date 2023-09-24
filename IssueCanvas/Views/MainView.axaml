@@ -14,8 +14,14 @@
   </Design.DataContext>
 
     <Grid>
-        <Button Command="{Binding LoadPictureCommand}" Content="{Binding Content}"></Button>
-		<controls:SKPictureControl Picture="{Binding Picture}"/>
+        <StackPanel Orientation="Horizontal">
+			<StackPanel Orientation="Vertical">
+                <Button Command="{Binding LoadPictureCommand}" Content="{Binding Content}"/>
+                <Button Command="{Binding PurgeCommand}" Content="Purge"/>				
+			</StackPanel>
+
+		    <controls:SKPictureControl Picture="{Binding Picture}"/>
+        </StackPanel>
     </Grid>
   
 </UserControl>

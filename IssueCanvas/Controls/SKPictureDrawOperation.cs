@@ -49,6 +49,7 @@ namespace IssueCanvas.Controls
             canvas.Save();
             canvas.DrawPicture(_picture);
             canvas.Restore();
+            lease.GrContext.PurgeResources(); // Try to lower unmanaged memory in skia
         }
     }
 }
